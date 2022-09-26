@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img class="logo" alt="github-log" src="./assets/logo.png"/>
+    <search-bar/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SearchBar from '@/components/SearchBar'
 
 export default {
-  name: 'App',
+  name: 'Github Search',
   components: {
-    HelloWorld
-  }
+    SearchBar
+  },
 }
 </script>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #010409;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+
+  height: 100vh;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 150px;
 }
 </style>
